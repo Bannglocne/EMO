@@ -21,6 +21,7 @@
     background-color: lightsteelblue;
     list-style: none;
     overflow: hidden;
+    padding: 0;
 }
 #menu-ul li{
     width: auto;

@@ -70,6 +70,7 @@ CREATE TABLE managers (
 -- Bảng "news":
 CREATE TABLE news (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    avatars VARCHAR(100) NOT NULL,
     title VARCHAR(100) NOT NULL,
     description VARCHAR(200) NOT NULL,
     content VARCHAR(10000) NOT NULL,
