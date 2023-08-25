@@ -1,0 +1,30 @@
+.taianh{
+    width: 100%;
+}
+
+label{
+    font-size: large;
+    font-weight: bold;
+}
+.nhaplieu{
+    width: 70%;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+textarea{
+    width: 70%;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px
+}
+
+.cainut{
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #fbb8d1;
+}

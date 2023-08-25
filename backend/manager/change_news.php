@@ -30,6 +30,9 @@ if ($conn->connect_error) {
     <title>Trang chủ</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style>
+
+    </style>
     <script>
         function changeWeb(){
             window.location.href ='add_news.php';
@@ -37,9 +40,11 @@ if ($conn->connect_error) {
     </script>
 </head>
 <body>
-    <div id="logo">
-        <img>
+    <div id="pattern">
+        <div class="flex-left"><img id="logo" src="../img/logo.png" height= "60px"></div>
+        <div class="flex-right"></div>
     </div>
+    <br>
     <div id='body'>
         <header>
             <ul id="menu-ul">
@@ -64,15 +69,20 @@ if ($conn->connect_error) {
                             $status = $row['status'];
                         }
                         echo "<form method='post' action='update.php?id=$id' enctype=multipart/form-data>";
-                        echo "<lable for='img'>Ảnh</lable>";
+
+                        echo "<lable for='img'>Ảnh: </lable>";
                         echo "<input type='file' name='avatar' value='../../uploads/",$avatar,"' required><br>";
-                        echo "<label for='title'>Tiêu đề: </label>";
+
+                        echo "<label for='title'>Tiêu đề: </label><br>";
                         echo "<input name='title' type='text' value='", $title,"' required><br>";
-                        echo "<label for='description'>Mô tả ngắn: </label>";
+
+                        echo "<label for='description'>Mô tả ngắn: </label><br>";
                         echo "<input name='description' type='text' value='", $description,"' required><br>";
-                        echo "<label for='content'>Nội dung: </label>";
+
+                        echo "<label for='content'>Nội dung: </label><br>";
                         echo "<input name='content' type='text' value='", $content,"' required><br>";
-                        echo "<lable for='status'>Trạng thái</lable>";
+
+                        echo "<lable for='status'>Trạng thái: </lable>";
                         echo "<select name='status'>";
                         if($status==0){
                             echo "<option value='0'>Disable</option>

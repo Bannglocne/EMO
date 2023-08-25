@@ -30,6 +30,12 @@ if ($conn->connect_error) {
     <title>Trang chủ</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/add_news.css">
+    <style>
+        form{
+            margin-left: 20px;
+        }
+    </style>
     <script>
         function changeWeb(){
             window.location.href ='add_news.php';
@@ -37,9 +43,11 @@ if ($conn->connect_error) {
     </script>
 </head>
 <body>
-    <div id="logo">
-        <img>
+    <div id="pattern">
+        <div class="flex-left"><img id="logo" src="../img/logo.png" height= "60px"></div>
+        <div class="flex-right"></div>
     </div>
+    <br>
     <div id='body'>
         <header>
             <ul id="menu-ul">
@@ -48,8 +56,10 @@ if ($conn->connect_error) {
                 <li><a class="menu-content" id="pro" href="../accounts/profile.php">Pro5</a></li>
             </ul>
         </header>
+
         <main id="home-container">
             <h3 class="h3-content">Thêm bài viết</h3>
+
                 <?php
                 if(isset($_SESSION['$title_news']) and isset($_SESSION['description_news']) and isset($_SESSION['content_news']) and (isset($_SESSION['status_news'])) and isset($_SESSION['error_add_news'])){
                     $title = $_SESSION['$title_news'];
@@ -59,20 +69,22 @@ if ($conn->connect_error) {
                     $error = $_SESSION['error_add_news'];
                 }
                 ?>
+
                 <form method="post" action='insert_news.php' enctype=multipart/form-data>
-                    <label>Hình ảnh</label>
-                    <input type="file" name="avatar" required><br>
+                    <label>Hình ảnh:</labe>
+                    <input type="file" name="avatar" required><br><br>
 
-                    <label for="title">Tiêu đề: </label>
-                    <input name="title" type="text" value="<?php if(isset($title)){echo $title; unset($_SESSION['$title_news']);} ?>" required><br>
+                    <label for="title">Tiêu đề: </label><br>
+                    <input class ="nhaplieu" name="title" type="text" value="<?php if(isset($title)){echo $title; unset($_SESSION['$title_news']);} ?>" required><br><br>
 
-                    <label for="description">Mô tả ngắn: </label>
-                    <input name="description" type="text" value="<?php if(isset($description)){echo $description; unset($_SESSION['$description_news']);} ?>" required><br>
+                    <label for="description">Mô tả ngắn: </label><br>
+                    <input class ="nhaplieu" name="description" type="text" value="<?php if(isset($description)){echo $description; unset($_SESSION['$description_news']);} ?>" required><br><br>
 
-                    <label for="content">Nội dung: </label>
-                    <textarea name="content" type="text" required><?php if(isset($content)){echo $content; unset($_SESSION['$content_news']);} ?></textarea><br>
+                    <label for="content">Nội dung: </label><br>
+                    <textarea name="content" type="text" required><?php if(isset($content)){echo $content; unset($_SESSION['$content_news']);} ?></textarea><br><br>
 
-                    <p>Trạng thái</p>
+                    <p>Trạng thái:</p>
+
                     <select name='status'>
                         <?php
                         if(isset($status)){
@@ -87,6 +99,7 @@ if ($conn->connect_error) {
                         }
                         ?>
                     </select>
+
                     <p class='error' name='error'>
                     <?php
                     if(isset($error)){
@@ -94,9 +107,10 @@ if ($conn->connect_error) {
                         unset($_SESSION['error_add_news']);
                     }
                     ?>
-
                     </p>
-                    <input name="submit" type="submit" value="Thêm">
+                    <br>
+
+                    <input class = "cainut" name="submit" type="submit" value="Thêm">
                 </form>
         </main>
     </div>

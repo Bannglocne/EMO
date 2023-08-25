@@ -30,7 +30,11 @@ if ($conn->connect_error) {
     <title>Trang chủ</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-
+    <style>
+        body{
+            background-color:#FFF6F0;
+        }
+    </style>
     <script>
         function changeWeb(){
             window.location.href ='add_news.php';
@@ -39,9 +43,10 @@ if ($conn->connect_error) {
 </head>
 <body>
     <div id="pattern">
-        <div class="flex-left">Logo</div>
-        <div class="flex-right">a</div>
+        <div class="flex-left"><img id="logo" src="../img/logo.png" height= "60px"></div>
+        <div class="flex-right"></div>
     </div>
+    <br>
     <div id='body'>
         <header>
             <ul id="menu-ul">

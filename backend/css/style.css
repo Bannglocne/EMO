@@ -18,17 +18,19 @@
     display: flex;
 }
 #menu-ul{
-    background-color: lightsteelblue;
     list-style: none;
     overflow: hidden;
     padding: 0;
 }
 #menu-ul li{
+    border-radius: 5px;
+    border: #0C0A0A solid 2px;
+    background-color: #fbb8d1;
     width: auto;
     height: 45px;
     line-height: 40px;
-    border-bottom: 1px solid #282828;
     padding: 0 1em;
+    margin-bottom: 4px;
 }
 
 a{
@@ -82,7 +84,7 @@ table{
     overflow: hidden;
 }
 th{
-    background-color: deepskyblue;
+    background-color: #91C8E4;
 }
 tr:nth-child(even) {
     background-color: #f2f2f2;
@@ -131,6 +133,6 @@ table th, table td{
 }
 .flex-right{
     width: 100%;
-    background-color: beige;
+    background-color: #fbb8d1;
     text-align: right;
 }
