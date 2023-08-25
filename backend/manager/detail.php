@@ -10,6 +10,9 @@
             font-weight: bold;
             margin-bottom: 3px;
         }
+        body{
+            background-color:#FFF6F0;
+        }
     </style>
     <script>
         function change(id){

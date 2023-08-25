@@ -31,7 +31,37 @@ if ($conn->connect_error) {
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <style>
+        body{
+            background-color:#FFF6F0;
+        }
+        label{
+            font-size: large;
+            font-weight: bold;
+        }
+        .nhaplieu{
+            width: 70%;
+            height: 30px;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        textarea{
+            width: 70%;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 8px
+        }
 
+        form{
+            padding-left: 20px ;
+        }
+        .cainut{
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: #fbb8d1;
+        }
     </style>
     <script>
         function changeWeb(){
@@ -45,6 +75,7 @@ if ($conn->connect_error) {
         <div class="flex-right"></div>
     </div>
     <br>
+    
     <div id='body'>
         <header>
             <ul id="menu-ul">
@@ -70,19 +101,19 @@ if ($conn->connect_error) {
                         }
                         echo "<form method='post' action='update.php?id=$id' enctype=multipart/form-data>";
 
-                        echo "<lable for='img'>Ảnh: </lable>";
-                        echo "<input type='file' name='avatar' value='../../uploads/",$avatar,"' required><br>";
+                        echo "<label for='img'>Ảnh: </label>";
+                        echo "<input type='file' name='avatar' value='../../uploads/",$avatar,"' required><br><br>";
 
                         echo "<label for='title'>Tiêu đề: </label><br>";
-                        echo "<input name='title' type='text' value='", $title,"' required><br>";
+                        echo "<input class = 'nhaplieu' name='title' type='text' value='", $title,"' required><br><br>";
 
-                        echo "<label for='description'>Mô tả ngắn: </label><br>";
-                        echo "<input name='description' type='text' value='", $description,"' required><br>";
+                        echo "<label  for='description'>Mô tả ngắn: </label><br>";
+                        echo "<input class = 'nhaplieu' name='description' type='text' value='", $description,"' required><br><br>";
 
                         echo "<label for='content'>Nội dung: </label><br>";
-                        echo "<input name='content' type='text' value='", $content,"' required><br>";
+                        echo "<textarea name='content' type='text' value='", $content,"' required></textarea><br><br>";
 
-                        echo "<lable for='status'>Trạng thái: </lable>";
+                        echo "<label for='status'>Trạng thái: </label>";
                         echo "<select name='status'>";
                         if($status==0){
                             echo "<option value='0'>Disable</option>
@@ -96,7 +127,7 @@ if ($conn->connect_error) {
                             echo $error;
                             unset($_SESSION['error_change_news']);
                         }
-                        echo "<br><input name='submit' type='submit' value='Lưu'>";
+                        echo "<br><br><input class = 'cainut' name='submit' type='submit' value='Lưu'>";
                         echo "</form>";
                     }
                     ?>

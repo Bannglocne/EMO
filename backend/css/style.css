@@ -24,13 +24,13 @@
 }
 #menu-ul li{
     border-radius: 5px;
-    border: #0C0A0A solid 2px;
+    border: #0C0A0A solid 3px;
     background-color: #fbb8d1;
+    margin-bottom: 4px;
     width: auto;
     height: 45px;
     line-height: 40px;
     padding: 0 1em;
-    margin-bottom: 4px;
 }
 
 a{

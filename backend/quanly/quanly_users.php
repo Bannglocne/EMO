@@ -24,14 +24,21 @@ if ($conn->connect_error) {
     <title>Quản Lý</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style>
+        body{
+            background-color: #FFF6F0;
+        }
+    </style>
 </head>
 <body>
-    <div id="logo">
-        <img>
+    <div id="pattern">
+        <div class="flex-left"><img id="logo" src="../img/logo.png" height= "60px"></div>
+        <div class="flex-right"></div>
     </div>
     <div id='body'>
     <header>
             <ul id="menu-ul">
+                <br>
                 <li><a class="menu-content" id="home" href="../manager/home.php">Trang chủ</a></li>
                 <li><a href="quanly_users.php">Người dùng</a></li>
                 <li><a class="menu-content" id="pro" href="../accounts/profile.php">Pro5</a></li>

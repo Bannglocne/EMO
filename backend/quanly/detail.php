@@ -4,6 +4,11 @@
     <title>Quản Lý</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style>
+        body{
+            background-color:#FFF6F0;
+        }
+    </style>
     <script>
         function change(id){
             window.location.href = "change_user.php?id="+id;
@@ -17,9 +22,12 @@
     </script>
 </head>
 <body>
-    <div id="logo">
-        <img>
+    <div id="pattern">
+        <div class="flex-left"><img id="logo" src="../img/logo.png" height= "60px"></div>
+        <div class="flex-right"></div>
     </div>
+    <br>
+
     <div id='body'>
         <header>
         <ul id="menu-ul">
