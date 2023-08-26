@@ -8,6 +8,13 @@
         body{
             background-color:#FFF6F0;
         }
+        p, .btn-clk{
+            margin-left: 20px;
+        }
+        p{
+            font-weight: bold;
+            font-size: 20px;
+        }
     </style>
     <script>
         function change(id){
@@ -70,12 +77,12 @@
                         }else{
                             $role="Chuyên gia";
                         }
-                        echo "ID: ",$id,"<br>";
-                        echo "Tên đăng nhập: ",$username,"<br>";
-                        echo "Email: ",$email,"<br>";
-                        echo "Vai trò: ",$role,"<br>";
-                        echo "Số người xem: ", $seen, "<br>";
-                        echo "Báo cáo: ",$report,"<br>";
+                        echo "<p>ID: ",$id,"</p><br>";
+                        echo "<p>Tên đăng nhập: ",$username,"</p><br>";
+                        echo "<p>Email: ",$email,"</p><br>";
+                        echo "<p>Vai trò: ",$role,"</p><br>";
+                        echo "<p>Số người xem: ", $seen, "</p><br>";
+                        echo "<p>Báo cáo: ",$report,"</p><br>";
                         echo "<button class='btn-clk' onclick='change($id)'>Sửa</button>";
                         echo "<button class='btn-clk' onclick='deleteIF($id)'>Xóa</button>";
                     }

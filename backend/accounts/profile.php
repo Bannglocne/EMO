@@ -7,6 +7,18 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <style>
+            .info-prf, #ten-txt{
+            font-size: 20px;
+            font-weight: bold;
+            }
+            .nut{
+                padding: 5px;
+                border: 2px solid black;
+                border-radius: 5px;
+                background-color: #fbb8d1;
+            }
+        </style>
         <script>
             function question(){
                 if(confirm('Bạn có chắc muốn đăng xuất?'))
@@ -18,9 +30,11 @@
     </head>
 
     <body>
-        <div id="logo">
-            <img>
+        <div id="pattern">
+            <div class="flex-left"><img id="logo" src="../img/logo.png" height= "60px"></div>
+            <div class="flex-right"></div>
         </div>
+        <br>
         <div id='body'>
             <header>
                 <ul id="menu-ul">
@@ -55,18 +69,17 @@
                                 $email = $row['email'];
 
                             }
-                            echo "<div id='ten-prf'><h3 id='div-content-prf'>Tên người dùng: </h3><p id='ten-txt'>", $username, "</p></div>";
-                            echo "<hr>";
+                            echo "<div id='ten-prf'><h3 id='div-content-prf'>Tên người dùng: </h3>&nbsp;<p id='ten-txt'>", $username, "</p></div>";
                             echo "<br>";
-                            echo "<p class='info-prf'>Email: ", $email, "</p><br>";
-                            echo "<br>";
+                            echo "<p class='info-prf'>Email: ", $email, "</p>";
                         }else{
                             echo "Không có dữ liệu";
                         }  
 
                         $conn->close();
                     ?>
-                    <button class="info-prf" id="logout" onclick="question()">Đăng Xuất</button>
+                    <br>
+                    <button class="nut" id="logout" onclick="question()">Đăng Xuất</button>
                 </div>
             </main>
         </div>

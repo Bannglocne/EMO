@@ -43,9 +43,10 @@ a{
     display: inline-block;
 }
 .content-table{
-    display: flex;
-    flex-direction: column-reverse;
+    /* display: flex; */
+    /* flex-direction: column-reverse; */
     align-items: center;
+    margin-left: 20px;
 }
 #menu-ul li a {
     text-decoration: none;
@@ -135,4 +136,8 @@ table th, table td{
     width: 100%;
     background-color: #fbb8d1;
     text-align: right;
+}
+
+#ten-prf{
+    display: flex;
 }

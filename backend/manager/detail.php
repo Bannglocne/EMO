@@ -36,7 +36,7 @@
     <div id='body'>
         <header>
             <ul id="menu-ul">
-                <li><a class="menu-content" id="home" href="home.php">Trang chủ</a></li>
+                <li><a class="menu-content" id="home" href="home.php">Quản lý bài viết/a></li>
                 <li><a href="../quanly/quanly_users.php">Người dùng</a></li>
                 <li><a class="menu-content" id="pro" href="../accounts/profile.php">Pro5</a></li>
             </ul>
@@ -83,7 +83,7 @@
                     echo "<div class='chu'>Mô tả: ",$description,"</div><br>";
                     echo "<div class='chu'>Nội dung: ",$content,"</div><br>";
                     echo "<div class='chu'>Trạng thái: ",$status,"</div><br>";
-                    echo "<button class='btn-clk' onclick='change($id)'>Sửa</button>";
+                    echo "<button class='btn-clk' onclick='change($id)'>Sửa</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
                     echo "<button class='btn-clk' onclick='deleteIF($id)'>Xóa</button>";
                 }
                 ?>
