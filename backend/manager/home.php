@@ -47,6 +47,7 @@ if ($conn->connect_error) {
         <div class="flex-right"></div>
     </div>
     <br>
+    
     <div id='body'>
         <header>
             <ul id="menu-ul">
