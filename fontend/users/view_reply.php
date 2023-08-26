@@ -74,7 +74,7 @@ $result_get_letters = $stmt_get_letters->get_result();
         <div id="head-content">
             <div id="menu">
                 <ul id="menu-ul">
-                    <li><a class="menu-content" id="home" href="home.php">Quản lý bài viết</a></li>
+                    <li><a class="menu-content" id="home" href="home.php">Trang chủ</a></li>
                     <li><a class="menu-content" id="write" href="viet.php">Viết</a></li>
                     <li><a class="menu-content" id="forest" href="../journals/emo_forest.php">Rừng</a></li>
                     <li><img id="logo" src="../img/logo.png" height= "60px"></li>

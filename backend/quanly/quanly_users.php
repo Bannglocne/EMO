@@ -39,9 +39,9 @@ if ($conn->connect_error) {
     <header>
             <ul id="menu-ul">
                 <br>
-                <li><a class="menu-content" id="home" href="../manager/home.php">Trang chủ</a></li>
+                <li><a class="menu-content" id="home" href="../manager/home.php">Quản lý bài viết</a></li>
                 <li><a href="quanly_users.php">Người dùng</a></li>
-                <li><a class="menu-content" id="pro" href="../accounts/profile.php">Pro5</a></li>
+                <li><a class="menu-content" id="pro" href="../accounts/profile.php">Trang cá nhân</a></li>
             </ul>
         </header>
         <main id="home-container">
