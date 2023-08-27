@@ -19,7 +19,7 @@
                 <ul id="menu-ul">
                     <li><a class="menu-content" id="home" href="../users/home.php">Trang chủ</a></li>
                     <li><a class="menu-content" id="write" href="../users/viet.php">Viết</a></li>
-                    <li><a class="menu-content" id="forest" href="emo_forest.php">Rừng</a></li>
+                    <li><a class="menu-content" id="forest" href="../journals/emo_forest.php">Rừng</a></li>
                     <li><img id="logo" src="../img/logo.png" height= "60px"></li>
                     <li><a class="menu-content" id="garden" href="../journals/view_journal.php">Vườn</a></li>
                     <li><a class="menu-content" id="prf" href="../users/view_reply.php"><img id="img-user" src="../img/letter.png"></a></li>

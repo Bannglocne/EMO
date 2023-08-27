@@ -40,8 +40,8 @@ if (!isset($_SESSION["user_id"])) {
         <header>
             <div id="menu">
                 <ul id="menu-ul">
-                    <li><a class="menu-content" id="home" href="../users/">Trang chủ</a></li>
-                    <li><a class="menu-content" id="write" href="../users/">Viết</a></li>
+                    <li><a class="menu-content" id="home" href="../users/home.php">Trang chủ</a></li>
+                    <li><a class="menu-content" id="write" href="../users/viet.php">Viết</a></li>
                     <li><a class="menu-content" id="forest" href="../journals/emo_forest.php">Rừng</a></li>
                     <li><img id="logo" src="../img/logo.png"></li>
                     <li><a class="menu-content" id="garden" href="../journals/view_journal.php">Vườn</a></li>

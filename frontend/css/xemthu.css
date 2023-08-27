@@ -27,20 +27,16 @@ body{
 
 /* CSS cho ô vuông "Hồi âm" */
 .tieude {
-    margin: 0 auto;
-    width: 200px;
-    height: 60px;
-    background-color: pink;
-    border: 2px solid black;
     font-weight: 500;
-    border-radius: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: quicksand;
-    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 40px;
+    font-family: Dela-Gothic-One;
+    font-size: 30px;
+    border-radius: 20px;
+    border: 1px;
+    box-shadow: 0px 5px 5px 5px #FFB0CD;
 }
+
 
 /* Danh sách các bức thư */
 #traloi{

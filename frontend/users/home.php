@@ -82,11 +82,11 @@ if ($conn->connect_error) {
         </div>
         
         <div class="home-choice">
-            <div class="home-choice-content"><a href='libary.php'>
+            <div class="home-choice-content"><a href='library.php'>
                 <h3>Bài viết hay</h3>
                 <p>Những mẫu văn giúp tiếp thêm nguồn động lực và nguồn cảm hứng cho bạn</p></a>
             </div>
-            <div class="home-choice-content"><a href='libary.php'>
+            <div class="home-choice-content"><a href='library.php'>
                 <h3>Podcast</h3>
                 <p>Lắng nghe những âm thanh du dương giúp chữa lành tâm hồn</p></a>
             </div>

@@ -38,13 +38,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     {
         $error_jour="Một ngày chỉ viết 1 nhật kí!";
         $_SESSION['error_jour']=$error_jour;
-        header("Location: view_journal.php");
+        header("Location: tree_garden.php");
         exit();
     }
     else{
         $sql_insert_journal = "INSERT INTO journals (user_id, emotion, content, date, month, year, public) VALUES ('$user_id', '$camxuc', '$content', '$day', '$month', '$year', '$chedo')";
         mysqli_query($conn,$sql_insert_journal);
-        header("Location: view_journal.php");
+        header("Location: tree_garden.php");
         exit();
     }
     

@@ -9,25 +9,34 @@ if (!isset($_SESSION["user_id"])) {
     exit();
 }
 
+// Kết nối đến cơ sở dữ liệu (chú ý thay đổi thông tin kết nối phù hợp với máy bạn)
+$servername = "localhost";
+$username = "emo";
+$password = "123456EmoR2";
+$dbname = "emo";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Kiểm tra kết nối
+if ($conn->connect_error) {
+    die("Kết nối thất bại: " . $conn->connect_error);
+}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Vườn</title>
+    <title>Viết</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/style.css" />
-    <?php
-        if(isset($_SESSION['error_jour'])){
-            $error = $_SESSION['error_jour'];
-            echo "<script> alert('$error');</script>";
-            unset($_SESSION['error_jour']);
+    <script>
+        function goChange(){
+            window.location.href = "change_journal.php?id=<?php echo $_GET['id'] ?>";
         }
-    ?>
+    </script>
     <style>
-        #garden{
+        #write{
             border-bottom: 1px solid black;
         }
-        
     </style>
 </head>
 <body>
@@ -38,20 +47,17 @@ if (!isset($_SESSION["user_id"])) {
                 <li><a class="menu-content" id="write" href="../users/viet.php">Viết</a></li>
                 <li><a class="menu-content" id="forest" href="emo_forest.php">Rừng</a></li>
                 <li><img id="logo" src="../img/logo.png"></li>
-                <li><a class="menu-content" id="garden" href="view_journal.php">Vườn</a></li>
+                <li><a class="menu-content" id="garden" href="../journals/view_journal.php">Vườn</a></li>
                 <li><a class="menu-content" id="prf" href="../users/view_reply.php"><img id="img-user" src="../img/letter.png"></a></li>
                 <li><a class="menu-content" id="prf" href="../accounts/profile.php"><img id="img-user" src="../img//user.png"></a></li>
             </ul>
         </div>
     </header>
-    <main id="main-vuon">
-        <div id="view-container">
-            <h3 id="wlc-vuon">Chào mừng bạn đến với</h3>
-            <h3 class="h3-viet" id="vuon-cx">KHU VƯỜN CẢM XÚC</h3>
-        </div>
-        <div id="vuon-content">
-            <div id="tree-emo">
-                <?php
+    <main id="main-read">
+        <div><h3 id='div-content-read'>Đọc nhật kí</h3></div>
+        <div id="read-container">
+            <?php
+                $id=$_GET['id'];
                 $servername = "localhost";
                 $username = "emo";
                 $password = "123456EmoR2";
@@ -63,12 +69,8 @@ if (!isset($_SESSION["user_id"])) {
                 }
 
                 //$camxuc = $_SESSION['camxuc'];
-                $userID = $_SESSION['user_id'];
-                $sql = "SELECT * FROM journals WHERE user_id='$userID';";
+                $sql = "SELECT * FROM journals WHERE id='$id';";
                 $result = $conn->query($sql);
-                $count = 0;
-                $count_vui=0;
-                $count_buon=0;
                 if($result->num_rows>0)
                 {
                     while($row=$result->fetch_assoc())
@@ -76,45 +78,36 @@ if (!isset($_SESSION["user_id"])) {
                             //Lấy dữ liệu từ cột trong dòng hiện tại
                             $id = $row['id'];
                             $camxuc = $row['emotion'];
+                            $content = $row['content'];
+                            $chedo = $row['public'];
                             $date = $row['date'];
                             $month = $row['month'];
                             $year = $row['year'];
-                            $count++;
-                            if($camxuc=='1')
-                            {
-                                echo "<a href='read_journal.php?id=",$id,"'><div class='container-view'><img class='img_emo' src='../img/vui.png'><div class='day-view'>",$date,"/",$month,"/",$year,"</div></div></a>";
-                                $count_vui++;
-                            }
-                            elseif($camxuc=='2'){
-                                echo "<a href='read_journal.php?id=",$id,"'><div class='container-view'><img class='img_emo' src='../img/buon.png'><div class='day-view'>",$date,"/",$month,"/",$year,"</div></div></a>";
-                                $count_buon++;
-                            }
                         }
+                    echo "<div><p class='info-read-p'>Ngày viết: ",$date,"/",$month,"/",$year,"</p></div>";
+                    if($camxuc=='1'){
+                        echo "<div id='camxuc-read'><p class='info-read-p'>Cảm xúc: </p><p class='info-read-p' id='vui-prf'>Vui</p></div>";
+                    }
+                    elseif($camxuc=='2'){
+                        echo "<div id='camxuc-read'><p class='info-read-p'>Cảm xúc: </p><p class='info-read-p' id='buon-prf''>Buồn</p></div>";
+                    }
+                    else{
+                        echo "<div id='camxuc-read'><p class='info-read-p'>Cảm xúc: </p><p class='info-read-p' id='khac-prf'>Khác</p></div>";
+                    }
+                    if ($chedo=='private'){
+                        echo "<div><p class='info-read-p'>Chế độ: Riêng tư</p></div>";
+                    }else{
+                        echo "<div><p class='info-read-p'>Chế độ: Công khai</p></div>";
+                    }
+                    
+                    echo "<div><p class='info-read-p'>Nội dung: ",$content, "</p></div>";
                 }else{
-                    echo "";
+                    echo "Không có dữ liệu";
                 }
 
                 $conn->close();
-                ?>
-            </div>
-            <div id="reemo-container">
-                <?php
-                if($count!=0)
-                {
-                    if($count_vui>$count_buon){
-                        echo "<div class='h3-viet' id='result-emo'><p>Số nhật ký vui nhiều hơn buồn</p></div>";
-                    }
-                    elseif($count_vui<$count_buon){
-                        echo "<div class='h3-viet' id='result-emo'><p>Số nhật ký buồn nhiều hơn vui</p></div>";
-                    }
-                    else{
-                        echo "<div class='h3-viet' id='result-emo'><p>Cảm xúc trung hòa</p></div>";
-                    }
-                } else{
-                    echo "";
-                }
-                ?>
-            </div>
+            ?>
+            <div class="info-read"><button class="btn_ch" onclick="goChange()">Sửa</button></div>
         </div>
     </main>
 </body>

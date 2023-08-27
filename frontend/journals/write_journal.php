@@ -98,9 +98,9 @@ if (!isset($_SESSION["user_id"])) {
                     $_SESSION['camxuc']=$camxuc;
                     ?>
                 </div>
-                <div id='chedo-content'>
+                <div class='chedo-content'>
                     <label>Quyền xem nhật ký:</label>
-                    <div id='chedo-content'>
+                    <div style='display:flex; gap: 15px;'>
                         <p>Riêng tư <input type='radio' name='chedo' value='private' checked></p>
                         <p>Công khai <input type='radio' name='chedo' value='public'></p>
                     </div>

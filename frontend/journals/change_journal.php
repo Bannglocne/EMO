@@ -28,14 +28,17 @@ if ($conn->connect_error) {
     <title>Viết</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/style.css" />
-    <script>
-        function goChange(){
-            window.location.href = "change_journal.php?id=<?php echo $_GET['id'] ?>";
-        }
-    </script>
     <style>
-        #write{
-            border-bottom: 1px solid black;
+        #btn-ch-sub{
+            width: 100px;
+            padding: 5px;
+            font-family: quicksand;
+            font-size: 20px;
+            border-radius: 30px;
+            background-color: #FAA5C4;
+            color: white;
+            margin: 10px 5px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -85,29 +88,40 @@ if ($conn->connect_error) {
                             $year = $row['year'];
                         }
                     echo "<div><p class='info-read-p'>Ngày viết: ",$date,"/",$month,"/",$year,"</p></div>";
+                    echo "<form method='post' action='update_change.php?id=$id' >";
                     if($camxuc=='1'){
-                        echo "<div id='camxuc-read'><p class='info-read-p'>Cảm xúc: </p><p class='info-read-p' id='vui-prf'>Vui</p></div>";
+                        echo "<div id='camxuc-read'><p class='info-read-p'>Cảm xúc: </p><p class='info-read-p' id='vui-prf'><input type='radio' name='camxuc' value='1' checked>Vui</p>";
+                        echo "<p class='info-read-p' id='buon-prf'><input type='radio' name='camxuc' value='2' >Buồn</p>";
+                        echo "<p class='info-read-p' id='khac-prf'><input type='radio' name='camxuc' value='3' >Khác</p></div>";
                     }
                     elseif($camxuc=='2'){
-                        echo "<div id='camxuc-read'><p class='info-read-p'>Cảm xúc: </p><p class='info-read-p' id='buon-prf''>Buồn</p></div>";
+                        echo "<div id='camxuc-read'><p class='info-read-p'>Cảm xúc: </p><p class='info-read-p' id='vui-prf'><input type='radio' name='camxuc' value='1'>Vui</p>";
+                        echo "<p class='info-read-p' id='buon-prf'><input type='radio' name='camxuc' value='2' checked>Buồn</p>";
+                        echo "<p class='info-read-p' id='khac-prf'><input type='radio' name='camxuc' value='3' >Khác</p></div>";
                     }
                     else{
-                        echo "<div id='camxuc-read'><p class='info-read-p'>Cảm xúc: </p><p class='info-read-p' id='khac-prf'>Khác</p></div>";
+                        echo "<div id='camxuc-read'><p class='info-read-p'>Cảm xúc: </p><p class='info-read-p' id='vui-prf'><input type='radio' name='camxuc' value='1'>Vui</p>";
+                        echo "<p class='info-read-p' id='buon-prf'><input type='radio' name='camxuc' value='2' >Buồn</p>";
+                        echo "<p class='info-read-p' id='khac-prf'><input type='radio' name='camxuc' value='3' checked>Khác</p></div>";
                     }
-                    if ($chedo=='private'){
-                        echo "<div><p class='info-read-p'>Chế độ: Riêng tư</p></div>";
+                    if($chedo=='public')
+                    {
+                        echo "<div class='info-read' id='chedo'><p class='info-read-p'>Chế độ rừng: </p><p class='info-read-p'><input type='radio' name='chedo' value='public' checked>Công khai</p>";
+                        echo "<p class='info-read-p'><input type='radio' name='chedo' value='private' >Riêng tư</p></div>";
                     }else{
-                        echo "<div><p class='info-read-p'>Chế độ: Công khai</p></div>";
+                        echo "<div class='info-read' id='chedo'><p class='info-read-p'>Chế độ rừng: </p><p class='info-read-p'><input type='radio' name='chedo' value='public'>Công khai</p>";
+                        echo "<p class='info-read-p'><input type='radio' name='chedo' value='private' checked>Riêng tư</p></div>";
                     }
-                    
-                    echo "<div><p class='info-read-p'>Nội dung: ",$content, "</p></div>";
+                    echo "<div id='content-change-info'><p class='info-read-p'>Nội dung: </p><textarea id='content_ch_in' name='content' type='text'>",$content,"</textarea></div>";
+                    echo "<div><a class='btn-ch' id='a-ch' href='read_journal.php?id=$id'>Hủy</a>";
+                    echo "<input id='btn-ch-sub' type='submit' value='Lưu'></div>";
+                    echo "</form>";
                 }else{
                     echo "Không có dữ liệu";
                 }
 
                 $conn->close();
             ?>
-            <div class="info-read"><button class="btn_ch" onclick="goChange()">Sửa</button></div>
         </div>
     </main>
 </body>

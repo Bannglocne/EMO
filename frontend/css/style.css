@@ -183,7 +183,7 @@
 
 }
 #question-viet{
-    margin: 0px 190px 10px 190px;
+    margin-bottom: 20px;
     border-radius: 20px;
     border: 1px;
     box-shadow: 0px 5px 5px 5px #FFB0CD;
@@ -197,7 +197,7 @@
     padding: 10px;
     margin: 5px;
     width: 300px;
-    height: 240px;
+    height: 250px;
     margin-top: 20%;
     border-radius: 20px;
     border: 1px solid black;
@@ -286,6 +286,16 @@
     background-color: #BFB9B4;
     border: 1px solid #BFB9B4;
     color: white;
+}
+.chedo-content{
+    border: 3px solid;
+    border-radius: 20px;
+    padding-inline: 15px;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+    gap: 5px;
 }
 
 
@@ -500,7 +510,7 @@ hr{
     color: red;
     font-family: quicksand;
     font-size: 20px;
-    margin-left: 10px;
+    margin-left: 60px;
     font-weight: bold;
 }
 #content_ch_info{
@@ -525,4 +535,37 @@ hr{
     color: #FAA5C4;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-size: 50px;
+    margin-block: 10px;
+}
+#lib-container{
+    margin: 20px 70px;
+}
+#lib-conent{
+    display: flex;
+    overflow: auto;
+    align-items: flex-end;
+    justify-content: space-around;
+
+}
+.lib-news-content{
+    display: inline-block;
+    text-align: center;
+}
+.lib-news-content h3{
+    font-family: Dela-Gothic-One;
+    font-size: 30px;
+}
+.lib-news-content p{
+    font-family: quicksand;
+    font-size: 20px;
+}
+.title-lib{
+    font-family: Dela-Gothic-One;
+    font-size: 30px;
+    text-align: center;
+}
+#content_ch_in{
+    width: 85%;
+    height: 250px;
+    font-size: 20px;
 }

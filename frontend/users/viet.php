@@ -79,7 +79,7 @@ if ($conn->connect_error) {
                 </div>
                 <div id="viet-thu" >
                     <div class="block-content" >
-                        <h3 class="h3-viet">Viết thư</h3>
+                        <h3 class="h3-viet">Viết câu hỏi</h3>
                         <p class='text-viet'>Bạn đang gặp vấn đề về tâm lý nhưng lại ngại nói chuyện trực tiếp với gia đình và bác sĩ. Vậy thì hãy gửi ngay một lá thư đến với chuyên gia tâm lý một cách ẩn danh nhưng bạn vẫn sẽ nhận được lời khuyên có ích.</p>
                     </div>
                     <div class="btn-container">

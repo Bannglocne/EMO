@@ -7,8 +7,11 @@
 # Giới thiệu
 Trang web gồm các chức năng chính:
 - Đăng nhập và đăng ký tài khoản
-- Soạn thư cho chuyên gia và xem thư phản hồi
+- Đọc bài viết được đăng
+- Soạn thư cho chuyên gia/người dùng và xem thư phản hồi
 - Viết nhật ký và xem nhật ký hàng ngày
+- Xem rừng cây cùng mọi người
+- Công khai rừng/nhật ký
 
 # Thành viên
 Trang web được phát triển bởi:
@@ -41,5 +44,12 @@ Trang web được phát triển bởi:
 
 ## Chạy chương trình
 - Trên thanh tìm kiếm của trình duyệt, gõ "localhost" và bấm Enter, trình duyệt sẽ tải trang "Index of"
-- Chọn vào tên thư mục đã chứa toàn bộ tệp của dự án (Mặc định có tên là "EMO")
-- Cùng trải nghiệm thôi nào!
+- Chọn vào tên thư mục đã chứa toàn bộ tệp của dự án (Mặc định có tên là "The_Rule_Breakers")
+- Trang frontend: Chọn "frontend" - Trang chính người dùng và chuyên gia
+- Trang Backend: Chọn "backend" - Trang cho admin, dùng để quản lý người dùng và thêm các bài viết mới
+
+## Các công cụ sử dụng
+- Frontend: PHP, HTML, CSS, Javascript
+- Backend: PHP, HTML, CSS, Javascript
+- CSDL: PHPMyadmin
+- Phần mềm: XAMPP

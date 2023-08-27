@@ -2,13 +2,6 @@
 // Gọi session_start() để bắt đầu phiên làm việc
 session_start();
 
-// Kiểm tra xem người dùng đã đăng nhập hay chưa
-if (!isset($_SESSION["ma_id"])) {
-    // Nếu không có phiên làm việc, chuyển hướng người dùng đến trang đăng nhập
-    header("Location: ../accounts/login.php");
-    exit();
-}
-
 // Kết nối đến cơ sở dữ liệu (chú ý thay đổi thông tin kết nối phù hợp với máy bạn)
 $servername = "localhost";
 $username = "emo";

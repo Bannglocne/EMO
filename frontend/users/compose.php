@@ -73,31 +73,31 @@
                 session_start();
                 if(isset($_SESSION['title_send_mail'])){
                     $title = $_SESSION['title_send_mail'];
-                    echo "<input class='input-in' type='text' value='$title' name='title' id='title' placeholder='Tiêu đề: '>";
+                    echo "<input class='input-in' type='text' value='$title' name='title'  style='font-weight:bold;' placeholder='Tiêu đề... '>";
                     unset($_SESSION['title_send_mail']);
                 }
                 else{
-                    echo "<input class='input-in' type='text' name='title' id='title' placeholder='Tiêu đề: '>";
+                    echo "<input class='input-in' type='text' name='title'  style='font-weight:bold;' placeholder='Tiêu đề... '>";
                 }
             ?>
         </div>
 
         <div class="tieude">
             <?php 
-                if(isset($_SESSION[''])){
-                    $content = $_SESSION['content_scontent_send_mailend_mail'];
-                    echo "<textarea class='input-in' name='content' id='content' placeholder='Nội dung lá thư...' value='$content'></textarea>";
+                if(isset($_SESSION['content_send_mail'])){
+                    $content = $_SESSION['content_send_mail'];
+                    echo "<textarea class='input-in' name='content' placeholder='Nội dung lá thư...'>$content</textarea>";
                     unset($_SESSION['content_send_mail']);
                 }
                 else{
-                    echo "<textarea class='input-in' name='content' id='content' placeholder='Nội dung lá thư...'></textarea>";
+                    echo "<textarea class='input-in' name='content' placeholder='Nội dung lá thư...'></textarea>";
                 }
             ?>
         </div>
         <?php
         if(isset($_SESSION['msg_mail_tu'])){
             $msg = $_SESSION['msg_mail_tu'];
-            echo $msg;
+            echo "<p class='error'>",$msg,"</p>";
             unset($_SESSION['msg_mail_tu']);
         }
         ?>
