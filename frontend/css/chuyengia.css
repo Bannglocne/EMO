@@ -1,0 +1,76 @@
+@font-face {
+    font-family: quicksand;
+    src: url('../font/Quicksand-VariableFont_wght.ttf') format('truetype');
+}
+@font-face{
+    font-family: Dela-Gothic-One;
+    src: url('../font/DelaGothicOne-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: chonburi;
+    src: url('../font/Chonburi-Regular.ttf') format('truetype');
+}
+/* Chỉnh nguyên cho cả file */
+body {
+    font-family: "QuickSand", sans-serif;
+    background-color: #FFF6F0;
+    max-width: 100%;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.danhsach{
+    list-style: none;
+}
+
+.nguoigui{
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.tieude{
+    display: flex;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.noidung{
+    font-weight: 500;
+    margin-bottom: 4px
+}
+
+.onhaplieu {
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 50%;
+    padding: 7px;
+}
+
+.thoigian{
+    display: flex;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+#traloi{
+    font-family: "QuickSand", sans-serif;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+textarea{
+    border: 3px solid black;
+    border-radius: 20px;
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#btn-ex {
+    font-weight: bold;
+    background-color: #FAA5C4;
+    border-radius: 10px;
+    color: black;
+    padding: 5px 10px;
+    border: 3px solid black;
+}

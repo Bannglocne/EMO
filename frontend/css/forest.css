@@ -1,0 +1,96 @@
+@font-face {
+    font-family: quicksand;
+    src: url('../font/Quicksand-VariableFont_wght.ttf') format('truetype');
+}
+@font-face{
+    font-family: Dela-Gothic-One;
+    src: url('../font/DelaGothicOne-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: chonburi;
+    src: url('../font/Chonburi-Regular.ttf') format('truetype');
+}
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #FFF6F0;
+}
+
+#menu-ul{
+    height: 60px;
+    list-style: none;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-around;
+    align-items: center;
+}
+#menu-ul a{
+    text-decoration: none;
+    display: block;
+    color: #FAA5C4;
+    font-size: 140%; 
+    font-family: quicksand;
+    font-weight: bold;
+    text-shadow: -1px 0 #B3ACA8, 0 1px #B3ACA8, 1px 0 #B3ACA8, 0 -1px #B3ACA8;
+}
+.menu-content{
+    display: block;
+
+}
+#menu-ul a:hover{
+    color: #F54B89;
+}
+#logo{
+    height: 60px;
+}
+#img-user{
+    height: 50px;
+}
+
+#view-container{
+    margin-top: 60px;
+}
+#wlc-vuon{
+    font-family: Dela-Gothic-One;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+#vuon-cx{
+    color: #FAA5C4;
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+    font-size: 40px;
+    padding: 6px;
+    text-align: center;
+    font-family: Dela-Gothic-One;
+}
+#tree-emo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow: auto;
+
+}
+.container-view{
+    position: relative;
+}
+.name-view{
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 40%;
+    font-size: 20px;
+    font-family: quicksand;
+    font-weight: 600;
+    color: white;
+}
+
+.a-forest:hover{
+    .name-view{
+        color: violet;
+    }
+}
+    
+    

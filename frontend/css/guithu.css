@@ -1,0 +1,116 @@
+@font-face {
+    font-family: quicksand;
+    src: url('../font/Quicksand-VariableFont_wght.ttf') format('truetype');
+}
+@font-face{
+    font-family: Dela-Gothic-One;
+    src: url('../font/DelaGothicOne-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: chonburi;
+    src: url('../font/Chonburi-Regular.ttf') format('truetype');
+}
+html {
+    box-sizing: border-box;
+}
+
+/* Chỉnh nguyên cho cả file */
+.tatca {
+    font-family: "QuickSand", sans-serif;
+    background-color: #FFF6F0;
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Chỉnh cho ô thông báo  */
+.thongbao {
+    margin: 0 auto; /* Dùng 'auto' để căn giữa theo chiều ngang */
+    width: 30%; /* Điều chỉnh rộng của ô vuông, có thể sử dụng giá trị theo ý muốn */
+    margin-top: 40px;
+    margin-bottom: 20px; /* Điều chỉnh khoảng cách giữa ô vuông và các phần tử phía dưới */
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 0px 5px 5px 5px #FFB0CD;
+}
+  
+  /* Bổ sung một vài styles cho phần chữ bên trong */
+.thongbao h3 {
+    text-align: center;
+    margin: 0; /* Loại bỏ khoảng cách lề giữa đầu tiên và phần tử phía trên */
+    padding: 5px; /* Tạo khoảng cách cho phần chữ bên trong ô vuông */
+    font-family: Dela-Gothic-One;
+    font-size: 25px;
+}  
+
+/* Chỉnh cho chọn chuyên gia  */
+.recipient-wrapper {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 3%;
+    background-color: #FFF6F0;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+    font-family: quicksand;
+    font-size: 20px;
+
+}
+
+.recipient-wrapper select {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    background-color: #FFF6F0;
+    font-size: 15px;
+    font-family: quicksand;
+    text-align: center;
+}
+
+
+/* Chỉnh cho phần nhập liệu */
+.tieude {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Chỉnh ô nhập */
+
+.input-in {
+    width: 92%; /* Bao giờ đủ trình chèn ảnh thì để 1280px */
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 20px;
+    font-family: quicksand;
+    font-size: 20px;
+}
+
+textarea {
+    height: 500px;
+}
+
+/* Chỉnh cho cái nút*/
+.cainut {
+    width: 97%;
+}
+
+.btn_sub {
+    font-size: large;
+    font-weight: bolder;
+    background-color: #FAA5C4;
+    border-radius: 10px;
+    padding: 15px 30px;
+    border: 3px solid black;
+    float: right;
+    font-family: quicksand;
+    font-size: 20px;
+}
+.btn_sub:hover{
+    background-color: white;
+    color: #FAA5C4;
+}
+#send_button{
+    width: auto;
+}
