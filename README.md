@@ -15,7 +15,7 @@ Trang web gồm các chức năng chính:
 
 # Thành viên
 Trang web được phát triển bởi:
-- Phan Thanh Sơn: Trưởng nhóm
+- Phan Thanh Sơn
 - Nguyễn Minh Khôi
 - Hoàng Thị Xuân Hoà
 - Nguyễn Xuân Lộc
