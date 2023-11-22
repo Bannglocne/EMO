@@ -1,13 +1,8 @@
 <?php
 session_start();
-// Kết nối đến cơ sở dữ liệu (chú ý thay đổi thông tin kết nối phù hợp với máy bạn)
-$servername = "localhost";
-$username = "emo";
-$password = "123456EmoR2";
-$dbname = "emo";
+include("../../frontend/base/connect_data.php")
 
 $error = "";
-$conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];

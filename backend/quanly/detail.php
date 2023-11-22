@@ -49,18 +49,8 @@
                 <?php
                 $userID = $_GET['id'];
                 session_start();
-                // Kết nối đến cơ sở dữ liệu (chú ý thay đổi thông tin kết nối phù hợp với máy bạn)
-                $servername = "localhost";
-                $username = "emo";
-                $password = "123456EmoR2";
-                $dbname = "emo";
+                include("../../frontend/base/connect_data.php")
 
-                $conn = new mysqli($servername, $username, $password, $dbname);
-
-                // Kiểm tra kết nối
-                if ($conn->connect_error) {
-                    die("Kết nối thất bại: " . $conn->connect_error);
-                }
                 $query = "SELECT * FROM users WHERE id='$userID'";
                 $del = "";
                 $result = $conn->query($query);

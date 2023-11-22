@@ -1,17 +1,6 @@
 <?php
 session_start();
-// Kết nối đến cơ sở dữ liệu (chú ý thay đổi thông tin kết nối phù hợp với máy bạn)
-$servername = "localhost";
-$username = "emo";
-$password = "123456EmoR2";
-$dbname = "emo";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-$error = "";
-// Kiểm tra kết nối
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
-}
+include("../../frontend/base/connect_data.php")
 
 // Xử lý thông tin đăng nhập khi người dùng nhấn nút "Đăng nhập"
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

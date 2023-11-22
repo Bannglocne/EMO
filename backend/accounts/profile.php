@@ -49,11 +49,8 @@
                 <div class='content-table'> 
                     <?php
                         session_start();
-                        $servername = "localhost";
-                        $username = "emo";
-                        $password = "123456EmoR2";
-                        $dbname = "emo";
-                        $conn = new mysqli($servername, $username, $password, $dbname);
+                        include("../../frontend/base/connect_data.php")
+
                         // Truy vấn thông tin gười dùng
                         $ma_id = $_SESSION["ma_id"];
                         $sql_user = "SELECT * FROM managers WHERE id='$ma_id';";

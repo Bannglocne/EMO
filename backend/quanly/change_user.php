@@ -1,20 +1,6 @@
 <?php
-// Gọi session_start() để bắt đầu phiên làm việc
 session_start();
-
-
-// Kết nối đến cơ sở dữ liệu (chú ý thay đổi thông tin kết nối phù hợp với máy bạn)
-$servername = "localhost";
-$username = "emo";
-$password = "123456EmoR2";
-$dbname = "emo";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Kiểm tra kết nối
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
-}
+include("../../frontend/base/connect_data.php")
 
 ?>
 
