@@ -1,10 +1,5 @@
 <?php
-session_start();
-
-if (!isset($_SESSION["user_id"])) {
-    header("Location: accounts/login.php");
-    exit();
-}
+include("../base/check_session.php");
 
 $servername = "localhost";
 $username = "emo";

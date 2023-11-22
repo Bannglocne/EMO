@@ -1,5 +1,6 @@
 <?php
-session_start();
+include("../base/check_session.php");
+
 $servername = "localhost";
 $username = "emo";
 $password = "123456EmoR2";

@@ -1,11 +1,6 @@
 <?php
-// Kiểm tra xem người dùng đã đăng nhập hay chưa
-session_start();
-if (!isset($_SESSION["user_id"])) {
-    // Nếu không có phiên làm việc, chuyển hướng người dùng đến trang đăng nhập
-    header("Location: ../accounts/login.php");
-    exit();
-}
+include("../base/check_session.php");
+
 //Kết nối đến cơ sở dữ liệu
 $servername = "localhost";
 $username = "emo";

@@ -1,20 +1,5 @@
 <?php
-// Gọi session_start() để bắt đầu phiên làm việc
-session_start();
-$msg_mail = "";
-// Kiểm tra xem người dùng đã đăng nhập hay chưa
-if (!isset($_SESSION["user_id"])) {
-    // Nếu không có phiên làm việc, chuyển hướng người dùng đến trang đăng nhập
-    header("Location: ../accounts/login.php");
-    exit();
-}
-
-// Kiểm tra xem người dùng có vai trò là người dùng thường hay không
-if ($_SESSION["role"] !== 'user') {
-    // Nếu không phải người dùng thường, chuyển hướng về trang chính
-    header("Location: ../experts/expert_page.php");
-    exit();
-}
+include("../base/check_session.php");
 
 $servername = "localhost";
 $username = "emo";
