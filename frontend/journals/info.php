@@ -1,5 +1,6 @@
 <?php
 include("../base/check_session.php");
+include("../base/connect_data.php")
 ?>
 <!DOCTYPE html>
 <html>
@@ -50,14 +51,6 @@ include("../base/check_session.php");
                 $pre_buon = 0;
                 $pre_khac = 0;
                 $userID = $_GET['id'];
-                $servername = "localhost";
-                $username = "emo";
-                $password = "123456EmoR2";
-                $dbname = "emo";
-                $conn = new mysqli($servername, $username, $password, $dbname);
-                if ($conn->connect_error) {
-                    die("Kết nối thất bại: " . $conn->connect_error);
-                }
                 $sql_emo = "SELECT * FROM journals WHERE user_id='$userID';";
                 $result_emo = $conn->query($sql_emo);
                 if($result_emo->num_rows>0)

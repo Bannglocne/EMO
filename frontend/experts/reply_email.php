@@ -1,16 +1,7 @@
 <?php
 include("../base/check_session.php");
+include("../base/connect_data.php")
 
-$servername = "localhost";
-$username = "emo";
-$password = "123456EmoR2";
-$dbname = "emo";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
-}
 $msg = "";
 // Kiểm tra xem có dữ liệu được gửi từ form trả lời hay không
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

@@ -1,5 +1,6 @@
 <?php
 include("../base/check_session.php");
+include("../base/connect_data.php")
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,17 +43,6 @@ include("../base/check_session.php");
         </div>
         <div id='tree-emo'>
             <?php
-            //Kết nối đến cơ sở dữ liệu
-            $servername = "localhost";
-            $username = "emo";
-            $password = "123456EmoR2";
-            $dbname = "emo";
-            $conn = new mysqli($servername, $username, $password, $dbname);
-
-            // Kiểm tra kết nối
-            if ($conn->connect_error) {
-                die("Kết nối thất bại: " . $conn->connect_error);
-            }
             $sql_user = "SELECT * FROM users WHERE public='public' AND role='user'";
             $result_user = $conn->query($sql_user);
             if($result_user->num_rows>0){

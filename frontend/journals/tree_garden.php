@@ -1,15 +1,7 @@
 <?php
 include("../base/check_session.php");
+include("../base/connect_data.php")
 
-$servername = "localhost";
-$username = "emo";
-$password = "123456EmoR2";
-$dbname = "emo";
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
-}
 $userID = $_SESSION['user_id'];
 $sql="SELECT * FROM journals WHERE created_at BETWEEN DATE_SUB(CURDATE(), INTERVAL 7 DAY) AND CURDATE() AND user_id=$userID;";
 $result = $conn->query($sql);

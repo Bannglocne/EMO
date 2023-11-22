@@ -5,17 +5,7 @@ if (!isset($_SESSION["user_id"])) {
     header("Location: ../accounts/login.php");
     exit();
 }
-//Kết nối đến cơ sở dữ liệu
-$servername = "localhost";
-$username = "emo";
-$password = "123456EmoR2";
-$dbname = "emo";
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Kiểm tra kết nối
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
-}
+include("../base/connect_data.php")
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name_ch'];

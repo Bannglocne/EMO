@@ -1,13 +1,6 @@
 <?php
-// Gọi session_start() để bắt đầu phiên làm việc
-session_start();
-
-// Kiểm tra xem người dùng đã đăng nhập hay chưa
-if (!isset($_SESSION["user_id"])) {
-    // Nếu không có phiên làm việc, chuyển hướng người dùng đến trang đăng nhập
-    header("Location: accounts/login.php");
-    exit();
-}
+include("../base/connect_data.php")
+include("../base/check_session.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,14 +55,6 @@ if (!isset($_SESSION["user_id"])) {
                 $pre_buon = 0;
                 $pre_khac = 0;
                 $userID = $_SESSION['user_id'];
-                $servername = "localhost";
-                $username = "emo";
-                $password = "123456EmoR2";
-                $dbname = "emo";
-                $conn = new mysqli($servername, $username, $password, $dbname);
-                if ($conn->connect_error) {
-                    die("Kết nối thất bại: " . $conn->connect_error);
-                }
                 $sql_emo = "SELECT * FROM journals WHERE user_id='$userID';";
                 $result_emo = $conn->query($sql_emo);
                 if($result_emo->num_rows>0)

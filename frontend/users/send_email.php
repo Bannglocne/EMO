@@ -1,5 +1,6 @@
 <?php
 include("../base/check_session.php");
+include("../base/connect_data.php")
 
 // Kiểm tra xem có dữ liệu được gửi từ form soạn thư hay không
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -7,19 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $recipient_id = $_POST["recipient"];
         $title = $_POST["title"];
         $content = $_POST["content"];
-
-        // Kết nối đến cơ sở dữ liệu (chú ý thay đổi thông tin kết nối phù hợp với máy bạn)
-        $servername = "localhost";
-        $username = "emo";
-        $password = "123456EmoR2";
-        $dbname = "emo";
-
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-        // Kiểm tra kết nối
-        if ($conn->connect_error) {
-            die("Kết nối thất bại: " . $conn->connect_error);
-        }
 
         // Kiểm tra xem người dùng có soạn quá 2 bức thư một tháng hay không
         $sql_count_emails = "SELECT COUNT(*) AS total_emails FROM emails WHERE sender_id = ?";

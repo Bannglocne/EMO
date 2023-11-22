@@ -1,31 +1,22 @@
 <?php
-    $servername = "localhost";
-    $username = "emo";
-    $password = "123456EmoR2";
-    $dbname = "emo";
+include("../base/connect_data.php")
 
- $conn = new mysqli($servername, $username, $password, $dbname);
+$recipient_name = $_GET['recipient_name'];
 
-    if ($conn->connect_error) {
-        die("Kết nối thất bại: " . $conn->connect_error);
-    }
+$sql_check_recipient = "SELECT * FROM users WHERE username = ?";
+$stmt_check_recipient = $conn->prepare($sql_check_recipient);
+$stmt_check_recipient->bind_param("s", $recipient_name);
 
-    $recipient_name = $_GET['recipient_name'];
+$stmt_check_recipient->execute();
 
-    $sql_check_recipient = "SELECT * FROM users WHERE username = ?";
-    $stmt_check_recipient = $conn->prepare($sql_check_recipient);
-    $stmt_check_recipient->bind_param("s", $recipient_name);
+$result = $stmt_check_recipient->get_result();
 
-    $stmt_check_recipient->execute();
+if ($result->num_rows > 0){
+    echo "true";
+}else{
+    echo "false";
+}
 
-    $result = $stmt_check_recipient->get_result();
-
-    if ($result->num_rows > 0){
-        echo "true";
-    }else{
-        echo "false";
-    }
-
-    $stmt_check_recipient->close();
-    $conn->close();
+$stmt_check_recipient->close();
+$conn->close();
 ?>

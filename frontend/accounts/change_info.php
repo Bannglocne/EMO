@@ -1,13 +1,6 @@
 <?php
-// Gọi session_start() để bắt đầu phiên làm việc
-session_start();
-
-// Kiểm tra xem người dùng đã đăng nhập hay chưa
-if (!isset($_SESSION["user_id"])) {
-    // Nếu không có phiên làm việc, chuyển hướng người dùng đến trang đăng nhập
-    header("Location: accounts/login.php");
-    exit();
-}
+include("../base/check_session.php");
+include("../base/connect_data.php")
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,15 +37,6 @@ if (!isset($_SESSION["user_id"])) {
         <main id="main-prf">
             
             <?php
-                $servername = "localhost";
-                $username = "emo";
-                $password = "123456EmoR2";
-                $dbname = "emo";
-                $conn = new mysqli($servername, $username, $password, $dbname);
-                if ($conn->connect_error) {
-                    die("Kết nối thất bại: " . $conn->connect_error);
-                }
-                
                 // Truy vấn thông tin gười dùng
                 $user_id = $_SESSION["user_id"];
                 $sql_user = "SELECT * FROM users WHERE id='$user_id';";

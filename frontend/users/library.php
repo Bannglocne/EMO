@@ -26,12 +26,8 @@
             <h3 class='text-lib'>Bài viết hay</h3>
             <div id='lib-conent'>
                 <?php
-                    $servername = "localhost";
-                    $username = "emo";
-                    $password = "123456EmoR2";
-                    $dbname = "emo";
+                    include("../base/connect_data.php")
                     
-                    $conn = new mysqli($servername, $username, $password, $dbname);
                     $query = "SELECT * FROM news WHERE status='1'";
                     $result = mysqli_query($conn, $query);
                     if ($result->num_rows>0){
