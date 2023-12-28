@@ -2,7 +2,6 @@
 include("../base/check_session.php");
 ?>
 
-<!-- CODE HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
