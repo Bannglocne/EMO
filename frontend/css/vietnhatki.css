@@ -1,0 +1,104 @@
+@font-face {
+    font-family: quicksand;
+    src: url('../font/Quicksand-VariableFont_wght.ttf') format('truetype');
+}
+@font-face{
+    font-family: Dela-Gothic-One;
+    src: url('../font/DelaGothicOne-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: chonburi;
+    src: url('../font/Chonburi-Regular.ttf') format('truetype');
+}
+html {
+    box-sizing: border-box;
+}
+
+.tatca {
+    font-family: "QuickSand", sans-serif;
+    background-color: #FFF6F0;
+    max-width: 100%;
+    text-align: center;
+}
+/* Gồm tieude, ngaygio, camxuc, noidung, cainut */
+
+.tieude{
+    margin-top: 80px;
+    margin-bottom: 35px;
+}
+
+h2{
+    width: 30%;
+    margin: auto;
+    font-weight: bold;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 0px 5px 5px 5px #FFB0CD;
+}
+
+.dong2{
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 31px;
+}
+
+.ngaygio{
+    font-family: "Racing Sans One", bold;
+    font-size: large;
+    padding: 15px 60px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+#camxuc{
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 13px 40px;
+    font-size: 20px;
+    font-family: quicksand;
+} 
+
+#chedo-container{
+    display: flex;
+    gap: 60px;
+}
+#chedo-content{
+    display: flex;
+    gap: 20px;
+}
+.noidung{
+    text-align: center;
+}
+#content_tamsu{
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 92%;
+    height: 500px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: quicksand;
+}
+
+.cainut {
+    width: 97%;
+}
+
+button {
+    background-color: #FAA5C4;
+    border-radius: 20px;
+    color: black;
+    padding: 10px 30px;
+    border: 3px solid black;
+    cursor: pointer;
+    display: block;
+    margin-top: 5px;
+    float: right;
+    font-family: Dela-Gothic-One;
+}
+button :hover{
+    background-color: white;
+}
